@@ -1,0 +1,21 @@
+.main-container-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 55px;
+}
+
+.main-container-card > .container-info {
+    display: flex;
+}
+
+.main-container-card > .container-info > .container-image-info-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    font-size: 3rem;
+    padding: 44px;
+    height: 100%;
+}

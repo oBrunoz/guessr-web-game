@@ -1,0 +1,11 @@
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons i {
+    padding: 10px;
+    text-align: center;
+    width: 70px;
+    background-color: white;
+    margin: 0 10px;
+}

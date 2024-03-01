@@ -1,0 +1,105 @@
+.main-container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container-card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 55px;
+}
+
+.main-container-card > .container-info {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.main-container-card > .container-info > .random-image {
+    width: 45%;
+}
+
+.main-container-card > .container-info > .container-image-info-entry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    font-size: 3rem;
+    padding: 44px;
+    height: 100%;
+    gap: 21px;
+}
+
+.content-puzzles {
+    width: 30%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.content-puzzles>a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 6rem;
+    background: #0C1713;
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    overflow: hidden;
+    transition: ease-in-out 1s;
+}
+
+.content-puzzles>a>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity .8s ease-in-out;
+}
+
+.content-puzzles>a:hover>img {
+    opacity: 1;
+    filter: blur(3px);
+}
+
+.content-puzzles>a>label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    font-size: 3.7rem;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+}
+
+.content-puzzles>a:hover>label {
+    opacity: 1;
+}
+
+.content-puzzles>a>i {
+    position: relative;
+    z-index: 1;
+    transition: ease-in-out .2s;
+}
+
+.content-puzzles>a:hover>i {
+    opacity: 0;
+    transform: scale(1.4);
+}

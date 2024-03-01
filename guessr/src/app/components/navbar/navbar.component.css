@@ -1,0 +1,23 @@
+header {
+    font-family: 'Karantina';
+    /* position: fixed; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 100vw;
+    padding: 10px 40px;
+    background-color: #1C5F66;
+
+    z-index: 10;
+}
+
+header>.heading-logo .logo {
+    color: whitesmoke;
+    letter-spacing: 4px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 70px;
+    text-decoration: none;
+}

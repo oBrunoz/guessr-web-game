@@ -1,0 +1,25 @@
+.user-input input {
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    width: 400px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.user-button button {
+    border: none;
+    color: white;
+    background: #0C1713;
+    padding: 15px 32px;
+    width: 400px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.user-button button:hover {
+    border: 1px solid white;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    cursor: pointer;
+}
