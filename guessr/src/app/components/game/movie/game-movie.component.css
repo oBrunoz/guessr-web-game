@@ -6,7 +6,12 @@
 }
 
 .main-container-card > .container-info {
+    width: 1100px;
     display: flex;
+}
+
+.img-card {
+    min-width: 300px;
 }
 
 .main-container-card > .container-info > .container-image-info-entry {
@@ -15,6 +20,7 @@
     align-items: center;
     flex-direction: column;
     width: 40%;
+    min-width: 400px;
     font-size: 3rem;
     padding: 44px;
     height: 100%;

@@ -1,7 +1,17 @@
+<!-- INPUT -->
 <div class="user-input">
-    <input type="text" name="" id="">
+    <input type="text" name="movieSearch" id="movieSearch" (input)="searchMovies($event)" [(ngModel)]="selectedMovieTitle">
 
+    <!-- SUGESTÕES -->
+    <div class="suggestions" *ngIf="showSuggestions" [ngClass]="{'fade-in': showSuggestions}">
+        <ul>
+            <li *ngFor="let movie of movieSuggestions" (click)="selectMovie(movie)">
+                {{ movie.title }}
+            </li>
+        </ul>
+    </div>
+
+    <button (click)="submitMovie($event)">Enviar</button> <!-- Botão para enviar a busca -->
 </div>
-<div class="user-button">
-    <button>Enviar</button>
-</div>
+
+
