@@ -25,3 +25,8 @@
     padding: 44px;
     height: 100%;
 }
+
+app-game-movie-info {
+    margin: 20px 0;
+    width: 100%;
+}

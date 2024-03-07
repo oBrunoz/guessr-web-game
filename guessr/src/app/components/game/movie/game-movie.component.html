@@ -5,7 +5,12 @@
         </div>
         <div class="container-image-info-entry">
             <app-game-movie-lives></app-game-movie-lives>
-            <app-game-movie-entry></app-game-movie-entry>
+            <app-game-movie-entry (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
+            <app-game-movie-info
+                *ngIf="movieSelected"
+                [movieTitle]="selectedMovieTitle"
+                [releaseYear]="selectedMovieReleaseYear"
+                [director]="selectedMovieDirector"></app-game-movie-info>
             <app-game-movie-buttons></app-game-movie-buttons>
         </div>
     </div>
