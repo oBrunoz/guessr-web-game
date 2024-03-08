@@ -4,8 +4,8 @@
             <app-game-movie-img></app-game-movie-img>
         </div>
         <div class="container-image-info-entry">
-            <app-game-movie-lives></app-game-movie-lives>
-            <app-game-movie-entry (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
+            <app-game-movie-lives [lives]="livesRemaining"></app-game-movie-lives>
+            <app-game-movie-entry [movieToGuessId]="movieToGuessId" (submitMovieEvent)="submitMovieHandler($event)" (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
             <app-game-movie-info
                 *ngIf="movieSelected"
                 [movieTitle]="selectedMovieTitle"
