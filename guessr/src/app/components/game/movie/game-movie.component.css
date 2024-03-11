@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     padding: 55px;
+    margin-top: 50px;
 }
 
 .main-container-card > .container-info {

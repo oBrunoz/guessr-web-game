@@ -25,7 +25,6 @@ import { GameMovieImgComponent } from './components/game/movie/game-movie-img/ga
     GameMovieImgComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'guessr';
