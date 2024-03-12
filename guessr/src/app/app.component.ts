@@ -9,6 +9,7 @@ import { GameMovieLivesComponent } from './components/game/movie/game-movie-live
 import { GameMovieEntryComponent } from './components/game/movie/game-movie-entry/game-movie-entry.component';
 import { GameMovieInfoComponent } from './components/game/movie/game-movie-info/game-movie-info.component';
 import { GameMovieImgComponent } from './components/game/movie/game-movie-img/game-movie-img.component';
+import { LevelSelectorComponent } from './components/level-selector/level-selector.component';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ import { GameMovieImgComponent } from './components/game/movie/game-movie-img/ga
     GameMovieLivesComponent,
     GameMovieEntryComponent,
     GameMovieInfoComponent,
-    GameMovieImgComponent
+    GameMovieImgComponent,
+    LevelSelectorComponent
   ],
   templateUrl: './app.component.html',
 })

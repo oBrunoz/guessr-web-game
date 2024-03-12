@@ -10,7 +10,6 @@ export class MovieAPIService {
     this.access_token = '';
   }
 
-
   async getToken(): Promise<string> {
     try {
       const credentials = 'CredentialKey';

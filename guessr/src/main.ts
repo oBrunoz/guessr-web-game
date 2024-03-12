@@ -5,6 +5,8 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { provideRouter } from '@angular/router';
 import { IndexComponent } from './app/components/index/index.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LevelSelectorComponent } from './app/components/level-selector/level-selector.component';
+import { GameMovieComponent } from './app/components/game/movie/game-movie.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -12,12 +14,14 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter([
       { path: 'index', component: IndexComponent },
-      
+      { path: 'level-selector', component: LevelSelectorComponent },
+      /*
       {
         path: 'game-movie',
         loadChildren: () => import('./app/components/game/movie/game-movie.routes')
           .then(r => r.GAMEMOVIE_ROUTES)
       },
+      */
       /*
       {
         path: 'game-movie',
@@ -26,6 +30,7 @@ bootstrapApplication(AppComponent, {
       },
       */
       /*{ path: 'game-movie', component: GameMovieComponent },*/
+      { path: 'game-movie/:phaseNumber', component: GameMovieComponent },
       { path: '', redirectTo: 'index', pathMatch: 'full' },
       { path: '**', redirectTo: 'index', pathMatch: 'full' },
     ]),

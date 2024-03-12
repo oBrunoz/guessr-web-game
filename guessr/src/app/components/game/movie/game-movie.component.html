@@ -5,7 +5,11 @@
         </div>
         <div class="container-image-info-entry">
             <app-game-movie-lives [lives]="livesRemaining"></app-game-movie-lives>
-            <app-game-movie-entry [movieToGuessId]="movieToGuessId" (submitMovieEvent)="submitMovieHandler($event)" (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
+            <app-game-movie-entry
+                *ngIf="!movieSelected"
+                [movieToGuessId]="movieToGuessId"
+                (submitMovieEvent)="submitMovieHandler($event)"
+                (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
             <app-game-movie-info
                 *ngIf="movieSelected"
                 [movieTitle]="selectedMovieTitle"

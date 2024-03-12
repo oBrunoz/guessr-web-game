@@ -1,0 +1,5 @@
+<div class="phase-selection">
+    <div class="phase" *ngFor="let phase of phases" (click)="selectPhase(phase)">
+      <span>{{ phase.phaseNumber }}</span>
+    </div>
+</div>
