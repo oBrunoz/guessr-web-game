@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-movie-img',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './game-movie-img.component.html',
   styleUrl: './game-movie-img.component.css'
 })
-export class GameMovieImgComponent {
 
+export class GameMovieImgComponent {
+  @Input() movieImageUrl!: string; // Propriedade de entrada para a URL da imagem
 }

@@ -23,13 +23,16 @@ export class GameMovieComponent implements OnInit {
     selectedMovieDirector: string = '';
 
     movieToGuessId!: number; // Define a ID do filme a ser descoberto
+    movieImageUrl!: string;
+    
     livesRemaining: number = 4; // Número inicial de vidas
     guessedCorrectly: boolean = false; // Indica se o filme foi adivinhado corretamente
 
-    constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService) {}
+    constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService ) {}
 
     ngOnInit() {
         this.movieToGuessId = this.levelSelectorService.getSelectedMovieId();
+        this.fetchMovieImage();
     }
 
     async submitMovieHandler(submittedCorrectly: boolean) {
@@ -44,4 +47,22 @@ export class GameMovieComponent implements OnInit {
         this.selectedMovieDirector = details.director;
         this.movieSelected = true;
     }
+
+
+    async fetchMovieImage() {
+        try {
+          const movieImageResponse = await this.movieAPIService.getMovieImage(this.movieToGuessId);
+          console.log(movieImageResponse);
+        
+          const moviePoster = movieImageResponse.posters[0].file_path;
+          console.log(moviePoster);
+
+          this.movieImageUrl = `https://www.themoviedb.org/t/p/original${moviePoster}`;
+          
+        } catch (error) {
+          console.error('Erro ao obter a imagem do filme:', error);
+        }
+    }
+
+
 }
