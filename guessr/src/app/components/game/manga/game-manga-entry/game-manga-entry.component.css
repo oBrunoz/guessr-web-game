@@ -1,0 +1,60 @@
+.user-input input {
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    width: 400px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.user-input button {
+    border: none;
+    color: white;
+    background: #0C1713;
+    padding: 15px 32px;
+    width: 400px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.user-input button:hover {
+    border: 1px solid white;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    cursor: pointer;
+}
+
+.user-input button:active {
+    background-color: #002626;
+}
+
+.suggestions {
+    background: white;
+    font-size: 15px;
+    overflow-y: auto;
+}
+
+.suggestions ul {
+    list-style: none;
+    padding-left: 10px;
+    max-height: 15em;
+}
+
+.suggestions ul li:hover {
+   background: rgb(210, 212, 212);
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
