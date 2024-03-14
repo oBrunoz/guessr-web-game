@@ -7,13 +7,15 @@ import { GameMovieButtonsComponent } from './game-movie-buttons/game-movie-butto
 import { CommonModule } from '@angular/common';
 import { MovieAPIService } from '../../../core/services/movie-api.service';
 import { LevelSelectorService } from '../../../core/services/level-selector.service';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-game-movie',
     standalone: true,
     templateUrl: './game-movie.component.html',
     styleUrl: './game-movie.component.css',
-    imports: [ GameMovieImgComponent, GameMovieLivesComponent, GameMovieEntryComponent, GameMovieInfoComponent, GameMovieButtonsComponent, CommonModule ]
+    imports: [ GameMovieImgComponent, GameMovieLivesComponent, GameMovieEntryComponent, GameMovieInfoComponent, GameMovieButtonsComponent, CommonModule ],
 })
 
 export class GameMovieComponent implements OnInit {
@@ -28,12 +30,24 @@ export class GameMovieComponent implements OnInit {
     livesRemaining: number = 4; // Número inicial de vidas
     guessedCorrectly: boolean = false; // Indica se o filme foi adivinhado corretamente
 
-    constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService ) {}
+    constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute, private http: HttpClient) {}
 
-    ngOnInit() {
-        this.movieToGuessId = this.levelSelectorService.getSelectedMovieId();
-        this.fetchMovieImage();
-    }
+    ngOnInit(): void {
+        // Recuperar o número da fase da URL
+        this.route.params.subscribe(params => {
+            const faseNumero = +params['phaseNumber']; // + converte para número
+            console.log(faseNumero);
+            // Fazer uma requisição HTTP para carregar o arquivo JSON
+            this.http.get<any>('assets/movie-ids.json').subscribe(data => {
+              // Processar os dados do JSON
+              const faseIdMapping = data;
+              // Obter o ID do filme correspondente ao número da fase
+              this.movieToGuessId = faseIdMapping[faseNumero];
+              // Usar o ID do filme para recuperar a imagem
+              this.fetchMovieImage();
+          });
+        });
+      }
 
     async submitMovieHandler(submittedCorrectly: boolean) {
         if (!submittedCorrectly) {
@@ -48,21 +62,16 @@ export class GameMovieComponent implements OnInit {
         this.movieSelected = true;
     }
 
-
     async fetchMovieImage() {
         try {
           const movieImageResponse = await this.movieAPIService.getMovieImage(this.movieToGuessId);
-          console.log(movieImageResponse);
-        
+          console.log(movieImageResponse)
           const moviePoster = movieImageResponse.posters[0].file_path;
-          console.log(moviePoster);
-
+          console.log(moviePoster)
           this.movieImageUrl = `https://www.themoviedb.org/t/p/original${moviePoster}`;
-          
         } catch (error) {
           console.error('Erro ao obter a imagem do filme:', error);
         }
-    }
-
+      }
 
 }

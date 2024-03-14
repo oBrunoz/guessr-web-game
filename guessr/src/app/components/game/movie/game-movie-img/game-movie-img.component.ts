@@ -11,3 +11,4 @@ import { Component, Input } from '@angular/core';
 export class GameMovieImgComponent {
   @Input() movieImageUrl!: string; // Propriedade de entrada para a URL da imagem
 }
+

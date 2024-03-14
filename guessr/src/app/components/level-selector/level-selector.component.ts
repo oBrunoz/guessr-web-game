@@ -20,9 +20,10 @@ export class LevelSelectorComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router, private levelSelectorService: LevelSelectorService) {}
 
   ngOnInit(): void {
-    this.getPhases().subscribe((movieIds: number[]) => {
-      this.phases = movieIds.map((movieId, index) => {
-        return { phaseNumber: index + 1, movieId: movieId };
+    this.getPhases().subscribe((phases: any) => {
+      this.phases = Object.keys(phases).map((key: string, index: number) => {
+        const phaseNumber = parseInt(key, 10);
+        return { phaseNumber, movieId: phases[key] };
       });
     });
   }
