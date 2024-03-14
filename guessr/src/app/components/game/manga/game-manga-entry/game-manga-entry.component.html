@@ -1,0 +1,14 @@
+<div class="user-input">
+    <input type="text" name="mangaSearch" id="mangaSearch" (input)="searchManga($event)" [(ngModel)]="selectedMangaTitle">
+
+    <!-- SUGESTÕES -->
+    <div class="suggestions" *ngIf="showSuggestions" [ngClass]="{'fade-in': showSuggestions}">
+        <ul>
+            <li *ngFor="let manga of mangaSuggestions" (click)="selectManga(manga)">
+                {{ manga.title }} ({{ manga.year }})
+            </li>
+        </ul>
+    </div>
+
+    <button (click)="submitManga()">Enviar</button> <!-- Botão para enviar a busca -->
+</div>
