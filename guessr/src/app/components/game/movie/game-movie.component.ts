@@ -35,7 +35,7 @@ export class GameMovieComponent implements OnInit {
     ngOnInit(): void {
         // Recuperar o número da fase da URL
         this.route.params.subscribe(params => {
-            const faseNumero = +params['phaseNumber']; // + converte para número
+            const faseNumero = +params['levelNumber']; // + converte para número
             console.log(faseNumero);
             // Fazer uma requisição HTTP para carregar o arquivo JSON
             this.http.get<any>('assets/movie-ids.json').subscribe(data => {

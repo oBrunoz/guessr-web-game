@@ -14,16 +14,16 @@ import { LevelSelectorService } from '../../core/services/level-selector.service
 })
 
 export class LevelSelectorComponent implements OnInit {
-  phases: { phaseNumber: number, movieId: number }[] = [];
+  levels: { levelNumber: number, movieId: number }[] = [];
   @Output() phaseSelected = new EventEmitter<number>();
 
   constructor(private http: HttpClient, private router: Router, private levelSelectorService: LevelSelectorService) {}
 
   ngOnInit(): void {
-    this.getPhases().subscribe((phases: any) => {
-      this.phases = Object.keys(phases).map((key: string, index: number) => {
-        const phaseNumber = parseInt(key, 10);
-        return { phaseNumber, movieId: phases[key] };
+    this.getPhases().subscribe((levels: any) => {
+      this.levels = Object.keys(levels).map((key: string, index: number) => {
+        const levelNumber = parseInt(key, 10);
+        return { levelNumber, movieId: levels[key] };
       });
     });
   }
@@ -32,9 +32,19 @@ export class LevelSelectorComponent implements OnInit {
     return this.http.get<number[]>('assets/movie-ids.json');
   }
 
-  selectPhase(phase: { phaseNumber: number, movieId: number }) {
-    this.levelSelectorService.setSelectedMovieId(phase.movieId);
-    this.router.navigate(['/game-movie', phase.phaseNumber]);
+  selectLevel(level: { levelNumber: number, movieId: number }) {
+    this.levelSelectorService.setSelectedMovieId(level.movieId);
+    // Navegar para a rota da fase selecionada
+    this.router.navigate(['/game-movie', level.levelNumber]);
+  }
+
+  randomLevel(): void {
+    // Gerar um índice aleatório dentro do intervalo do array de fases
+    const randomIndex = Math.floor(Math.random() * this.levels.length);
+    // Obter o número da fase correspondente ao índice aleatório
+    const randomPhaseNumber = this.levels[randomIndex];
+    // Navegar para a rota da fase selecionada
+    this.router.navigate(['/game-movie', randomPhaseNumber.levelNumber]);
   }
 
 }
