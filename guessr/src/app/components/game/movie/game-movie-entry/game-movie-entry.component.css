@@ -19,6 +19,7 @@
 
 .user-input button:hover {
     background-color: #04110d;
+    cursor: pointer;
 }
 
 .user-input button:active {

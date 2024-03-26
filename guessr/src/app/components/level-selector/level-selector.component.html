@@ -1,5 +1,9 @@
-<div class="phase-selection">
-    <div class="phase" *ngFor="let phase of phases" (click)="selectPhase(phase)">
-      <span>{{ phase.phaseNumber }}</span>
+<div>
+  <div class="level-selection">
+    <div class="return-button"><a href="/#/index" class="fa-solid fa-arrow-rotate-left"></a></div>
+    <div class="random-button" (click)="randomLevel()">Random</div>
+    <div class="level" *ngFor="let level of levels" (click)="selectLevel(level)">
+      <span>{{ level.levelNumber }}</span>
     </div>
+  </div>
 </div>

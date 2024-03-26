@@ -5,7 +5,20 @@
 .buttons i {
     padding: 10px;
     text-align: center;
-    width: 70px;
+
     background-color: white;
     margin: 0 10px;
+
+    border-radius: 5px;
 }
+
+.buttons i:hover {
+    color: white;
+    background: #294747;
+    cursor: pointer;
+}
+
+.buttons i:active {
+    color: white;
+    background: #002626;
+  }
