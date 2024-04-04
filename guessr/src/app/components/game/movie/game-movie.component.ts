@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { GameMovieImgComponent } from "./game-movie-img/game-movie-img.component";
 import { GameMovieLivesComponent } from './game-movie-lives/game-movie-lives.component';
 import { GameMovieEntryComponent } from './game-movie-entry/game-movie-entry.component';
@@ -30,19 +30,21 @@ export class GameMovieComponent implements OnInit {
     livesRemaining: number = 4; // Número inicial de vidas
     guessedCorrectly: boolean = false; // Indica se o filme foi adivinhado corretamente
 
+    @ViewChild(GameMovieEntryComponent) gameMovieEntryComponent!: GameMovieEntryComponent;
+
     constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute, private http: HttpClient) {}
 
     ngOnInit(): void {
         // Recuperar o número da fase da URL
         this.route.params.subscribe(params => {
-            const faseNumero = +params['levelNumber']; // + converte para número
-            console.log(faseNumero);
+            const levelNumber = +params['levelNumber']; // + converte para número
+            console.log(levelNumber);
             // Fazer uma requisição HTTP para carregar o arquivo JSON
             this.http.get<any>('assets/movie-ids.json').subscribe(data => {
               // Processar os dados do JSON
               const faseIdMapping = data;
               // Obter o ID do filme correspondente ao número da fase
-              this.movieToGuessId = faseIdMapping[faseNumero];
+              this.movieToGuessId = faseIdMapping[levelNumber];
               // Usar o ID do filme para recuperar a imagem
               this.fetchMovieImage();
           });
@@ -53,7 +55,11 @@ export class GameMovieComponent implements OnInit {
         if (!submittedCorrectly) {
             this.livesRemaining--; // Reduz o número de vidas se o filme foi submetido incorretamente
           }
+        if (this.livesRemaining < 1) {
+          this.gameMovieEntryComponent.wrongMovie();
+        }
       }
+
 
     onMovieSelected(details: any) {
         this.selectedMovieTitle = details.title;

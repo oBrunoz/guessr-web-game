@@ -14,7 +14,7 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter([
       { path: 'index', component: IndexComponent },
-      { path: 'level-selector', component: LevelSelectorComponent },
+      { path: 'level-selector/:gameType', component: LevelSelectorComponent },
       /*
       {
         path: 'game-movie',
@@ -30,7 +30,7 @@ bootstrapApplication(AppComponent, {
       },
       */
       /*{ path: 'game-movie', component: GameMovieComponent },*/
-      { path: 'game-movie/:phaseNumber', component: GameMovieComponent },
+      { path: 'game-movie/:levelNumber', component: GameMovieComponent },
       { path: '', redirectTo: 'index', pathMatch: 'full' },
       { path: '**', redirectTo: 'index', pathMatch: 'full' },
     ]),

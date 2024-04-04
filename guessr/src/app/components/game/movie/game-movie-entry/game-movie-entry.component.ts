@@ -98,4 +98,41 @@ export class GameMovieEntryComponent implements OnInit {
     }
   }
 
+  async wrongMovie() {
+    // Chamar a função para buscar informações do filme pelo ID
+    this.movieAPIService.getMovieDetails(this.movieToGuessId)
+    .then((movieDetails: any) => {
+      console.log('Detalhes do filme:');
+      console.log(movieDetails.title);
+      console.log(movieDetails.release_date);
+      console.log(movieDetails.poster_path);
+
+      // Obter o ano do release_date
+      const releaseYear = new Date(movieDetails.release_date).getFullYear();
+
+      // Chamar a função para buscar os créditos do filme pelo ID
+      this.movieAPIService.getMovieCredits(this.movieToGuessId)
+        .then((movieCredits: any) => {
+          const directors = movieCredits.crew.filter((member: { name: string, department: string, job: string }) => member.department === "Directing" && member.job === "Director");
+          console.log("Direção:");
+          const directorNames = directors.map((director: { name: string; }) => director.name);
+          console.log(directorNames);
+
+          // Detalhes do filme
+          const details = {
+            title: movieDetails.title,
+            releaseYear: releaseYear,
+            director: directorNames.join(', ') // Convertendo a array de nomes em uma string separada por vírgulas
+          };
+          
+          // Emitir os detalhes do filme
+          this.movieSelected.emit(details);
+        })
+        .catch((error: any) => {
+          console.error('Erro ao buscar detalhes do filme:', error);
+        });
+    })
+ 
+  
+  }
 }

@@ -57,6 +57,7 @@
     border: 3px solid whitesmoke;
     overflow: hidden;
     transition: ease-in-out 1s;
+    cursor: pointer;
 }
 
 .content-puzzles>a>img {
@@ -87,6 +88,7 @@
     height: 100%;
     opacity: 0;
     transition: opacity .2s ease-in-out;
+    cursor: pointer;
 }
 
 .content-puzzles>a:hover>label {
