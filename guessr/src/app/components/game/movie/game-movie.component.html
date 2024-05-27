@@ -1,7 +1,10 @@
 <div class="main-container-card">
     <div class="container-info">
         <div class="img-card">
-            <app-game-movie-img [movieImageUrl]="movieImageUrl"></app-game-movie-img>
+            <app-game-movie-img
+            [movieImageUrl]="movieImageUrl"
+            [lives]="livesRemaining"
+            [guessedCorrectly]="guessedCorrectly"></app-game-movie-img>
         </div>
         <div class="container-image-info-entry">
             <app-game-movie-lives [lives]="livesRemaining"></app-game-movie-lives>

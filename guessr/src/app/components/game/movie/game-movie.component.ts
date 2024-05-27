@@ -52,6 +52,9 @@ export class GameMovieComponent implements OnInit {
       }
 
     async submitMovieHandler(submittedCorrectly: boolean) {
+        if (submittedCorrectly) {
+          this.guessedCorrectly = true; 
+        }
         if (!submittedCorrectly) {
             this.livesRemaining--; // Reduz o número de vidas se o filme foi submetido incorretamente
           }

@@ -1,4 +1,31 @@
+.img-container {
+
+    width: 70%;
+}
+
 .img-card img {
     border: 2px solid white;
-    width: 80%;
+    width: 100%;
 }
+
+.blur-4 img {
+    filter: blur(25px); /* Valor máximo de desfoque */
+}
+
+.blur-3 img {
+    filter: blur(20px); /* Valor médio de desfoque */
+}
+
+.blur-2 img {
+    filter: blur(15px); /* Valor mínimo de desfoque */
+}
+
+.blur-1 img {
+    filter: blur(10px); /* Valor quase sem desfoque */
+}
+
+.no-blur img {
+    filter: blur(0); /* Sem desfoque */
+}
+
+
