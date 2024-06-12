@@ -46,9 +46,9 @@ export class MovieAPIService {
     }
   }
 
-  async getMovieImage(movie_id: number): Promise<any> {
+  async getMovieImage(movie_id: number, language = ''): Promise<any> {
     try {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/images`, {
+      const response = await fetch(`https://api.themoviedb.org/3/movie/${movie_id}/images?language=${language}`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
