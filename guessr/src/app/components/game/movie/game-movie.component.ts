@@ -45,6 +45,12 @@ export class GameMovieComponent implements OnInit {
               const faseIdMapping = data;
               // Obter o ID do filme correspondente ao número da fase
               this.movieToGuessId = faseIdMapping[levelNumber];
+
+              // Resetar a quantidade de vidas e o estado de acerto
+              this.livesRemaining = 4;
+              this.guessedCorrectly = false;
+              this.movieSelected = false
+
               // Usar o ID do filme para recuperar a imagem
               this.fetchMovieImage();
           });
@@ -52,6 +58,9 @@ export class GameMovieComponent implements OnInit {
       }
 
     async submitMovieHandler(submittedCorrectly: boolean) {
+        if (submittedCorrectly) {
+          this.guessedCorrectly = true; 
+        }
         if (!submittedCorrectly) {
             this.livesRemaining--; // Reduz o número de vidas se o filme foi submetido incorretamente
           }
@@ -68,11 +77,11 @@ export class GameMovieComponent implements OnInit {
         this.movieSelected = true;
     }
 
-    async fetchMovieImage() {
+      async fetchMovieImage() {
         try {
-          const movieImageResponse = await this.movieAPIService.getMovieImage(this.movieToGuessId);
+          const movieImageResponse = await this.movieAPIService.getMovieDetails(this.movieToGuessId, "en");
           console.log(movieImageResponse)
-          const moviePoster = movieImageResponse.posters[0].file_path;
+          const moviePoster = movieImageResponse.poster_path;
           console.log(moviePoster)
           this.movieImageUrl = `https://www.themoviedb.org/t/p/original${moviePoster}`;
         } catch (error) {

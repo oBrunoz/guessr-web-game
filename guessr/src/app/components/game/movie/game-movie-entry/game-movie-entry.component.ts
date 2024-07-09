@@ -47,6 +47,8 @@ export class GameMovieEntryComponent implements OnInit {
   }
 
   async submitMovie() {
+    console.log(this.selectedMovie)
+    console.log(this.selectedMovie.id)
     if (this.selectedMovie) {
       const movieId = this.selectedMovie.id;
       try {
@@ -90,6 +92,7 @@ export class GameMovieEntryComponent implements OnInit {
 
         } else {
           this.submitMovieEvent.emit(false); // Emite um evento para indicar que o filme foi submetido incorretamente
+          console.log("erro")
 
         }
       } catch (error) {
