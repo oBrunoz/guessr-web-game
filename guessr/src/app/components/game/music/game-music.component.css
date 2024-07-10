@@ -1,0 +1,33 @@
+.main-container-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 55px;
+  margin-top: 50px;
+}
+
+.main-container-card > .container-info {
+  width: 1100px;
+  display: flex;
+}
+
+.img-card {
+  min-width: 300px;
+}
+
+.main-container-card > .container-info > .container-image-info-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  min-width: 400px;
+  font-size: 3rem;
+  padding: 44px;
+  height: 100%;
+}
+
+app-game-movie-info {
+  margin: 20px 0;
+  width: 100%;
+}

@@ -1,0 +1,24 @@
+<div class="main-container-card">
+    <div class="container-info">
+        <div class="img-card">
+            <app-game-img
+            [ImageUrl]="albumImageUrl"
+            [lives]="livesRemaining"
+            [guessedCorrectly]="guessedCorrectly"></app-game-img>
+        </div>
+        <div class="container-image-info-entry">
+            <app-game-lives [lives]="livesRemaining"></app-game-lives>
+            <app-game-music-entry
+                *ngIf="!albumSelected"
+                [albumToGuessId]="albumToGuessId"
+                (submitAlbumEvent)="submitAlbumHandler($event)"
+                (albumSelected)="onAlbumSelected($event)"></app-game-music-entry>
+            <app-game-info
+                *ngIf="albumSelected"
+                [movieTitle]="selectedAlbumTitle"
+                [releaseYear]="selectedAlbumReleaseYear"
+                [producer]="selectedAlbumArtist"></app-game-info>
+            <app-game-buttons></app-game-buttons>
+        </div>
+    </div>
+</div>

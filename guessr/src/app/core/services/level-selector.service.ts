@@ -4,15 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LevelSelectorService {
-  private selectedMovieId!: number;
+  private selectedLevelId!: number;
 
   constructor() {}
 
-  setSelectedMovieId(movieId: number) {
-    this.selectedMovieId = movieId;
+  setSelectedLevelId(levelId: number) {
+    this.selectedLevelId = levelId;
   }
 
-  getSelectedMovieId(): number {
-    return this.selectedMovieId;
+  getSelectedLevelId(): number {
+    return this.selectedLevelId;
   }
 }
