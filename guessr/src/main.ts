@@ -8,6 +8,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { LevelSelectorComponent } from './app/components/level-selector/level-selector.component';
 import { GameMovieComponent } from './app/components/game/movie/game-movie.component';
 import { GameMusicComponent } from './app/components/game/music/game-music.component';
+import { GameVideogameComponent } from './app/components/game/videogame/game-videogame.component';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -33,6 +34,7 @@ bootstrapApplication(AppComponent, {
       /*{ path: 'game-movie', component: GameMovieComponent },*/
       { path: 'game-movie/:levelNumber', component: GameMovieComponent },
       { path: 'game-music/:levelNumber', component: GameMusicComponent },
+      { path: 'game-videogame', component: GameVideogameComponent },
       { path: '', redirectTo: 'index', pathMatch: 'full' },
       { path: '**', redirectTo: 'index', pathMatch: 'full' },
     ]),
