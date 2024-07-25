@@ -1,1 +1,23 @@
-<p>game-videogame works!</p>
+<div class="main-container-card">
+    <div class="container-info">
+        <div class="img-card">
+            <app-game-img
+            [ImageUrl]="videogameCoverUrl"
+            [lives]="livesRemaining"
+            [guessedCorrectly]="guessedCorrectly"></app-game-img>
+        </div>
+        <div class="container-image-info-entry">
+            <app-game-lives [lives]="livesRemaining"></app-game-lives>
+            <app-game-videogame-entry
+                *ngIf="!videogameSelected"
+                [videogameToGuessId]="videogameToGuessId"
+                (submitVideogameEvent)="submitVideogameHandler($event)"
+                (videogameSelected)="onVideogameSelected($event)"></app-game-videogame-entry>
+            <app-game-info
+                *ngIf="videogameSelected"
+                [movieTitle]="selectedVideogameTitle"
+                [releaseYear]="selectedVideogameReleaseYear"></app-game-info>
+            <app-game-buttons></app-game-buttons>
+        </div>
+    </div>
+</div>

@@ -34,6 +34,7 @@ bootstrapApplication(AppComponent, {
       /*{ path: 'game-movie', component: GameMovieComponent },*/
       { path: 'game-movie/:levelNumber', component: GameMovieComponent },
       { path: 'game-music/:levelNumber', component: GameMusicComponent },
+      { path: 'game-videogame/:levelNumber', component: GameVideogameComponent },
       { path: 'game-videogame', component: GameVideogameComponent },
       { path: '', redirectTo: 'index', pathMatch: 'full' },
       { path: '**', redirectTo: 'index', pathMatch: 'full' },

@@ -1,11 +1,21 @@
 .img-container {
-
     width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.img-card {
+    width: 500px; /* Tamanho fixo ou mínimo para a imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-card img {
     border: 2px solid white;
     width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 .blur-4 img {
@@ -27,5 +37,3 @@
 .no-blur img {
     filter: blur(0); /* Sem desfoque */
 }
-
-

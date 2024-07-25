@@ -23,9 +23,6 @@ export class GameMusicEntryComponent {
 
   constructor( private musicAPIService: MusicAPIService) {}
 
-  ngOnInit(): void {
-  }
-
   async searchAlbums(event: any) {
     const query = event.target.value;
     if (query) {
