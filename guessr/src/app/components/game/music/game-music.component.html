@@ -15,7 +15,7 @@
                 (albumSelected)="onAlbumSelected($event)"></app-game-music-entry>
             <app-game-info
                 *ngIf="albumSelected"
-                [movieTitle]="selectedAlbumTitle"
+                [workTitle]="selectedAlbumTitle"
                 [releaseYear]="selectedAlbumReleaseYear"
                 [producer]="selectedAlbumArtist"></app-game-info>
             <app-game-buttons></app-game-buttons>

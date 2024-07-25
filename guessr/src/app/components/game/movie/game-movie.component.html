@@ -15,7 +15,7 @@
                 (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
             <app-game-info
                 *ngIf="movieSelected"
-                [movieTitle]="selectedMovieTitle"
+                [workTitle]="selectedMovieTitle"
                 [releaseYear]="selectedMovieReleaseYear"
                 [producer]="selectedMovieDirector"></app-game-info>
             <app-game-buttons></app-game-buttons>

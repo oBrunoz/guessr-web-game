@@ -5,7 +5,8 @@
 }
 
 .img-card {
-    width: 500px; /* Tamanho fixo ou mínimo para a imagem */
+    width: 500px;
+    /* Tamanho fixo ou mínimo para a imagem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,25 +16,30 @@
     border: 2px solid white;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .blur-4 img {
-    filter: blur(25px); /* Valor máximo de desfoque */
+    filter: blur(25px);
+    /* Valor máximo de desfoque */
 }
 
 .blur-3 img {
-    filter: blur(20px); /* Valor médio de desfoque */
+    filter: blur(20px);
+    /* Valor médio de desfoque */
 }
 
 .blur-2 img {
-    filter: blur(15px); /* Valor mínimo de desfoque */
+    filter: blur(15px);
+    /* Valor mínimo de desfoque */
 }
 
 .blur-1 img {
-    filter: blur(10px); /* Valor quase sem desfoque */
+    filter: blur(10px);
+    /* Valor quase sem desfoque */
 }
 
 .no-blur img {
-    filter: blur(0); /* Sem desfoque */
+    filter: blur(0);
+    /* Sem desfoque */
 }

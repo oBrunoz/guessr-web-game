@@ -1,17 +1,17 @@
-.game-movie-info-box {
+.game-info-box {
     color: white;
 }
 
-.movie-title {
+.title {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.movie-release-year {
+.release-year {
     font-size: 25px;
 }
 
-.movie-producer {
+.producer {
     font-size: 25px;
 }

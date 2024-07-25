@@ -1,14 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+
 import { LevelSelectorService } from '../../../core/services/level-selector.service';
 import { VideogameAPIService } from '../../../core/services/videogame-api.service';
-import { GameButtonsComponent } from '../../common/game-buttons/game-buttons.component';
 import { GameImgComponent } from '../../common/game-img/game-img.component';
-import { GameInfoComponent } from '../../common/game-info/game-info.component';
 import { GameLivesComponent } from '../../common/game-lives/game-lives.component';
 import { GameVideogameEntryComponent } from './game-videogame-entry/game-videogame-entry.component';
-import { HttpClient } from '@angular/common/http';
+import { GameInfoComponent } from '../../common/game-info/game-info.component';
+import { GameButtonsComponent } from '../../common/game-buttons/game-buttons.component';
 
 @Component({
   selector: 'app-game-videogame',

@@ -5,13 +5,13 @@ import { GameMovieEntryComponent } from '../../game/movie/game-movie-entry/game-
 @Component({
   selector: 'app-game-info',
   standalone: true,
-  imports: [ GameMovieEntryComponent ],
+  imports: [GameMovieEntryComponent],
   templateUrl: './game-info.component.html',
   styleUrl: './game-info.component.css'
 })
 
 export class GameInfoComponent {
-  @Input() movieTitle: string = '';
+  @Input() workTitle: string = '';
   @Input() releaseYear: number | undefined;
   @Input() producer: string = '';
 }

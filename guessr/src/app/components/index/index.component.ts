@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 
 export class IndexComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  gameLevelSelector(gameType: string){
+  gameLevelSelector(gameType: string) {
 
     // Navegar para a rota da fase selecionada
     this.router.navigate(['/level-selector', gameType]);
