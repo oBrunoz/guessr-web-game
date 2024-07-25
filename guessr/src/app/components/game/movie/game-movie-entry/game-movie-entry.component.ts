@@ -136,6 +136,5 @@ export class GameMovieEntryComponent implements OnInit {
         });
     })
  
-  
   }
 }

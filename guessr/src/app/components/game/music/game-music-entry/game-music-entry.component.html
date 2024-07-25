@@ -1,0 +1,17 @@
+<!-- INPUT -->
+<div class="user-input">
+    <input type="text" name="albumSearch" id="albumSearch" (input)="searchAlbums($event)" [(ngModel)]="selectedAlbumTitle">
+
+    <!-- SUGESTÕES -->
+    <div class="suggestions" *ngIf="showSuggestions" [ngClass]="{'fade-in': showSuggestions}">
+        <ul>
+            <li *ngFor="let album of albumSuggestions" (click)="selectAlbum(album)">
+                {{ album.title }} - ({{ album.artist }})
+            </li>
+        </ul>
+    </div>
+
+    <button (click)="submitAlbum()">Enviar</button> <!-- Botão para enviar a busca -->
+</div>
+
+

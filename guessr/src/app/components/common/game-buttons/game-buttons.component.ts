@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-game-movie-buttons',
+  selector: 'app-game-buttons',
   standalone: true,
   imports: [],
-  templateUrl: './game-movie-buttons.component.html',
-  styleUrl: './game-movie-buttons.component.css'
+  templateUrl: './game-buttons.component.html',
+  styleUrl: './game-buttons.component.css'
 })
-export class GameMovieButtonsComponent {
+export class GameButtonsComponent {
 
   constructor(private router: Router, private route: ActivatedRoute) {}
 

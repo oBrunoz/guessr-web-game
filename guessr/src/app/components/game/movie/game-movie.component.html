@@ -1,24 +1,24 @@
 <div class="main-container-card">
     <div class="container-info">
         <div class="img-card">
-            <app-game-movie-img
-            [movieImageUrl]="movieImageUrl"
+            <app-game-img
+            [ImageUrl]="movieImageUrl"
             [lives]="livesRemaining"
-            [guessedCorrectly]="guessedCorrectly"></app-game-movie-img>
+            [guessedCorrectly]="guessedCorrectly"></app-game-img>
         </div>
         <div class="container-image-info-entry">
-            <app-game-movie-lives [lives]="livesRemaining"></app-game-movie-lives>
+            <app-game-lives [lives]="livesRemaining"></app-game-lives>
             <app-game-movie-entry
                 *ngIf="!movieSelected"
                 [movieToGuessId]="movieToGuessId"
                 (submitMovieEvent)="submitMovieHandler($event)"
                 (movieSelected)="onMovieSelected($event)"></app-game-movie-entry>
-            <app-game-movie-info
+            <app-game-info
                 *ngIf="movieSelected"
                 [movieTitle]="selectedMovieTitle"
                 [releaseYear]="selectedMovieReleaseYear"
-                [director]="selectedMovieDirector"></app-game-movie-info>
-            <app-game-movie-buttons></app-game-movie-buttons>
+                [producer]="selectedMovieDirector"></app-game-info>
+            <app-game-buttons></app-game-buttons>
         </div>
     </div>
 </div>

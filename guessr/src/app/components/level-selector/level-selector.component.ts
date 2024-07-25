@@ -14,22 +14,40 @@ import { LevelSelectorService } from '../../core/services/level-selector.service
 })
 
 export class LevelSelectorComponent implements OnInit {
-  levels: { levelNumber: number, movieId: number }[] = [];
+  levels: { levelNumber: number, levelId: number }[] = [];
   @Output() phaseSelected = new EventEmitter<number>();
+  gameType: string = '';
 
   constructor(private http: HttpClient, private router: Router, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute ) {}
 
   ngOnInit(): void {
-    this.getPhases().subscribe((levels: any) => {
-      this.levels = Object.keys(levels).map((key: string, index: number) => {
-        const levelNumber = parseInt(key, 10);
-        return { levelNumber, movieId: levels[key] };
+    this.route.url.subscribe(url => {
+      // Definindo o gameType
+      this.gameType = url[1].path;
+
+      // Definindo o número de fases
+      this.getPhases().subscribe((levels: any) => {
+        this.levels = Object.keys(levels).map((key: string, index: number) => {
+          const levelNumber = parseInt(key, 10);
+          return { levelNumber, levelId: levels[key] };
+        });
       });
     });
   }
 
   getPhases(): Observable<number[]> {
-    return this.http.get<number[]>('assets/movie-ids.json');
+    let jsonFile = 'assets/movie-ids.json'; // Default
+    if (this.gameType === 'game-movie') {
+      jsonFile = 'assets/movie-ids.json';
+    } else if (this.gameType === 'game-music') {
+      jsonFile = 'assets/album-ids.json';
+    } else if (this.gameType === 'game-videogame') {
+      jsonFile = 'assets/videogame-ids.json';
+    } else if (this.gameType === 'game-manga') {
+      jsonFile = 'assets/manga-ids.json';
+    }
+
+    return this.http.get<number[]>(jsonFile);
   }
 
   randomLevel(): void {
@@ -38,18 +56,16 @@ export class LevelSelectorComponent implements OnInit {
     // Obter o número da fase correspondente ao índice aleatório
     const randomPhaseNumber = this.levels[randomIndex];
     // Navegar para a rota da fase selecionada
-    this.router.navigate(['/game-movie', randomPhaseNumber.levelNumber]);
+    this.router.navigate([this.gameType, randomPhaseNumber.levelNumber]);
   }
 
-  selectLevel(level: { levelNumber: number, movieId: number }) {
-    this.levelSelectorService.setSelectedMovieId(level.movieId);
-
-    // Obtém o tipo de jogo da URL
-    const gameType = this.route.snapshot.url[1].path;
-    console.log(gameType)
+  selectLevel(level: { levelNumber: number, levelId: number }) {
+    this.levelSelectorService.setSelectedLevelId(level.levelId);
 
     // Navegar para a rota da fase selecionada
-    this.router.navigate([gameType, level.levelNumber]);
+    this.router.navigate([this.gameType, level.levelNumber]);
+
+    console.log(this.gameType, level.levelNumber, level.levelId)
   }
 
 }
