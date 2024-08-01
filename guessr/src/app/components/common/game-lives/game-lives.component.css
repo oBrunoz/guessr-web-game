@@ -1,0 +1,7 @@
+.user-life .fa-star.filled {
+    color: gold; /* Define a cor da estrela quando ativa */
+  }
+  
+  .user-life .fa-star {
+    color: #758686; /* Define a cor padrão da estrela */
+  }
