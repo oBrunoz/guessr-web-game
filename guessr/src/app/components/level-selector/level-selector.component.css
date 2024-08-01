@@ -1,0 +1,81 @@
+.level-selection {
+  margin: 250px auto;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.return-button {
+  width: 20%;
+  height: 110px;
+  background-color: #ccc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 20px;
+  border-radius: 5px;
+
+}
+
+.return-button a {
+  padding: 30px 35px;
+  font-size: 2.5em;
+  color: #002626;
+  text-decoration: none;
+}
+
+.random-button {
+  width: 71%;
+  height: 110px;
+  background-color: #ccc;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+
+  font-size: 2em;
+  color: #002626;
+  font-weight: 600;
+}
+  
+.level {
+  width: 84px;
+  height: 84px;
+  background-color: #ccc;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+
+  font-size: 20px;
+  color: #002626;
+  font-weight: 600;
+}
+
+.level:hover, .return-button:hover, .random-button:hover {
+  color: white;
+  background: #294747;
+  cursor: pointer;
+}
+
+.return-button a:hover {
+  color: white;
+}
+
+.level:active, .return-button:active, .random-button:active {
+  color: white;
+  background: #002626;
+}
+
+.return-button i:active {
+  color: white;
+}
