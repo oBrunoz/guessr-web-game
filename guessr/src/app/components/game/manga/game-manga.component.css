@@ -15,7 +15,13 @@
     align-items: center;
     flex-direction: column;
     width: 40%;
+    min-width: 400px;
     font-size: 3rem;
     padding: 44px;
     height: 100%;
+}
+
+app-game-manga-info {
+    margin: 20px 0;
+    width: 100%;
 }
