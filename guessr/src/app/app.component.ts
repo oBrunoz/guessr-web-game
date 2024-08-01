@@ -10,6 +10,7 @@ import { GameMovieEntryComponent } from './components/game/movie/game-movie-entr
 import { GameMovieInfoComponent } from './components/game/movie/game-movie-info/game-movie-info.component';
 import { GameMovieImgComponent } from './components/game/movie/game-movie-img/game-movie-img.component';
 import { GameMangaComponent } from './components/game/manga/game-manga.component';
+import { LevelSelectorComponent } from './components/level-selector/level-selector.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { GameMangaComponent } from './components/game/manga/game-manga.component
     GameMovieLivesComponent,
     GameMovieInfoComponent,
     GameMovieImgComponent,
-    GameMangaComponent
+    GameMangaComponent,
+    LevelSelectorComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
