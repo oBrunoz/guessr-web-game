@@ -9,7 +9,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './game-manga-img.component.css'
 })
 export class GameMangaImgComponent {
-  @Input() imageUrl: string = '';
-
-  constructor() {console.log(this.imageUrl)}
+  @Input() mangaImageUrl: string = '';
 }
