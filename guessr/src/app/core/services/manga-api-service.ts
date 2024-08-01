@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
 import { resolveObjectURL } from 'buffer';
+// const b = require('pixelate');
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class MangaAPIService {
-    private access_token?: string;
-
-    constructor() {
-        this.access_token = '';
-    }
-
-    // SEM USO
     async getMangaList() {
         try {
             const response = await axios.get('https://api.mangadex.org/manga');
@@ -23,9 +17,9 @@ export class MangaAPIService {
         }
     }
 
-    async fetchSuggestions(title: string) {
+    async fetchSuggestions(title: string = '', id: string = '') {
         try {
-            const response = await axios.get(`https://api.mangadex.org/manga?limit=10&title=${title}&status%5B%5D=completed`);
+            const response = await axios.get(`https://api.mangadex.org/manga?limit=10&title=${title}&status[]=completed&status[]=ongoing&contentRating[]=safe&order[rating]=desc`);
             const mangaData = response.data.data;
             const titles = mangaData.map((manga:any) => {
                 let portugueseTitle = manga.attributes.altTitles.find((altTitle:any) => altTitle['pt-br']);
@@ -103,6 +97,14 @@ export class MangaAPIService {
             throw new Error(`Erro ao recuperar detalhes de manga: ${error}`);
         }
     }
+
+    // async getMangaById(id: string) {
+    //     try {
+    //         const response = await axios.get(`https://api.mangadex.org/manga/${id}`);
+    //     } catch (error) {
+            
+    //     }
+    // }
 
 }
 // Chama a função fetchMangaInfo para executar a requisição e lidar com a resposta.
