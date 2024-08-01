@@ -1,12 +1,24 @@
 <div class="main-container-card">
     <div class="container-info">
         <div class="img-card">
-            <app-game-manga-img></app-game-manga-img>
+            <app-game-img
+            [ImageUrl]="mangaImageUrl"
+            [lives]="livesRemaining"
+            [guessedCorrectly]="guessedCorrectly"></app-game-img>
         </div>
         <div class="container-image-info-entry">
-            <app-game-movie-lives></app-game-movie-lives>
-            <app-game-manga-entry></app-game-manga-entry>
-            <app-game-movie-buttons></app-game-movie-buttons>
+            <app-game-lives [lives]="livesRemaining"></app-game-lives>
+            <app-game-manga-entry
+                *ngIf="!mangaSelected"
+                [mangaToGuessId]="mangaToGuessId"
+                (submitMangaEvent)="submitMangaHandler($event)"
+                (mangaSelected)="onMangaSelected($event)"></app-game-manga-entry>
+            <app-game-info
+                *ngIf="mangaSelected"
+                [mangaTitle]="selectedMangaTitle"
+                [releaseYear]="selectedMangaReleaseYear"
+                [producer]="selectedMangaDirector"></app-game-info>
+            <app-game-buttons></app-game-buttons>
         </div>
     </div>
 </div>
