@@ -1,0 +1,680 @@
+[
+    {
+        "id": 1,
+        "title": "one piece",
+        "manga_id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
+        "cover_art_id": "dcd1744b-0cb0-4804-ad76-6618e80cc0fc"
+    },
+    {
+        "id": 2,
+        "title": "naruto",
+        "manga_id": "6b1eb93e-473a-4ab3-9922-1a66d2a29a4a",
+        "cover_art_id": "af4e6e40-f0b1-4fab-a083-e0c6c9ee8b85"
+    },
+    {
+        "id": 3,
+        "title": "dragon ball",
+        "manga_id": "af0527c1-8734-4498-b128-7090340bc10d",
+        "cover_art_id": "fd8293cb-a826-46ba-93c7-e5a56d3d8be3"
+    },
+    {
+        "id": 4,
+        "title": "one punch man",
+        "manga_id": "d8a959f7-648e-4c8d-8f23-f1f3f8e129f3",
+        "cover_art_id": "a546c9ad-3ccf-4126-804a-a442b8d2898b"
+    },
+    {
+        "id": 5,
+        "title": "boku no hero academia",
+        "manga_id": "4f3bcae4-2d96-4c9d-932c-90181d9c873e",
+        "cover_art_id": "17cd3805-b2cd-4136-9916-b7c8ac82dab7"
+    },
+    {
+        "id": 6,
+        "title": "solo leveling",
+        "manga_id": "32d76d19-8a05-4db0-9fc2-e0b0648fe9d0",
+        "cover_art_id": "e6583e52-1125-4c50-8db4-e8d6cf3fb144"
+    },
+    {
+        "id": 7,
+        "title": "chainsaw man",
+        "manga_id": "e896c48c-3150-437d-ba57-d8567eb399ae",
+        "cover_art_id": "4b599b92-fb4c-4baa-a6c9-02c0976232e4"
+    },
+    {
+        "id": 8,
+        "title": "hunter x hunter",
+        "manga_id": "db692d58-4b13-4174-ae8c-30c515c0689c",
+        "cover_art_id": "2032d89c-e3ec-4b46-913f-2d0de4cbab93"
+    },
+    {
+        "id": 9,
+        "title": "fairy tail",
+        "manga_id": "b6157b7f-e751-4513-b788-f3ac11aed9a8",
+        "cover_art_id": "5fc8c50b-a340-4876-a98f-45c6f4f568bf"
+    },
+    {
+        "id": 10,
+        "title": "fullmetal alchemist",
+        "manga_id": "dd8a907a-3850-4f95-ba03-ba201a8399e3",
+        "cover_art_id": "7cfc866e-1d67-4ffa-85e3-01b7259a4e7c"
+    },
+    {
+        "id": 11,
+        "title": "berserker",
+        "manga_id": "78567cc0-ed34-47f3-a3e1-72cbc07fe6f8",
+        "cover_art_id": "6a2f021e-bb85-44b6-b1ae-1179564578f4"
+    },
+    {
+        "id": 12,
+        "title": "demon slayer",
+        "manga_id": "62040a44-0935-46b7-a691-5ae5833af0ae",
+        "cover_art_id": "5d96f145-149c-4ff7-afe4-04c7d79a6fef"
+    },
+    {
+        "id": 13,
+        "title": "Attack on Titan",
+        "manga_id": "304ceac3-8cdb-4fe7-acf7-2b6ff7a60613",
+        "cover_art_id": "2b888ee6-eb25-4f48-86b0-f4fe898ab234"
+    },
+    {
+        "id": 14,
+        "title": "Haikyu",
+        "manga_id": "8f8b7cb0-7109-46e8-b12c-0448a6453dfa",
+        "cover_art_id": "65f8be89-e76d-4f8b-b728-a2a3e29f92aa"
+    },
+    {
+        "id": 15,
+        "title": "JoJo\u2019s Bizarre Adventure",
+        "manga_id": "7a9d76c3-42b9-4bcf-81d7-ad307d2ea971",
+        "cover_art_id": "7fe27a52-c7ff-4c4f-9744-291bfc10c36f"
+    },
+    {
+        "id": 16,
+        "title": "Gintama",
+        "manga_id": "f65444dc-3694-4e31-a166-8afb2938ed55",
+        "cover_art_id": "b5d49f2a-565d-4f4a-98d8-b33624348831"
+    },
+    {
+        "id": 17,
+        "title": "Kingdom",
+        "manga_id": "077a3fed-1634-424f-be7a-9a96b7f07b78",
+        "cover_art_id": "627f0d8b-68bf-4475-b915-1ee38e40673a"
+    },
+    {
+        "id": 18,
+        "title": "Yu Yu Hakusho",
+        "manga_id": "44a5cbe1-0204-4cc7-a1ff-0fda2ac004b6",
+        "cover_art_id": "b56502a4-7c29-46f8-bcf8-8b7b197969e6"
+    },
+    {
+        "id": 19,
+        "title": "Bleach",
+        "manga_id": "a460ab18-22c1-47eb-a08a-9ee85fe37ec8",
+        "cover_art_id": "53df5cfb-e090-4037-9714-cce4c9606d84"
+    },
+    {
+        "id": 20,
+        "title": "Rurouni Kenshin",
+        "manga_id": "754a46fa-62fa-457a-bc3b-4f31bf1373d4",
+        "cover_art_id": "4fba9ebb-4e68-485e-a5e0-a0afe5e3ae39"
+    },
+    {
+        "id": 21,
+        "title": "Golden Kamuy",
+        "manga_id": "8847f905-550d-4fe6-bcda-ac2b896789c7",
+        "cover_art_id": "3fad2c9f-6f4e-407d-aa24-dc5d6b2aa812"
+    },
+    {
+        "id": 22,
+        "title": "Tokyo Ghoul",
+        "manga_id": "6a1d1cb1-ecd5-40d9-89ff-9d88e40b136b",
+        "cover_art_id": "cedb7318-738d-4fb3-b916-bcdf5127fe95"
+    },
+    {
+        "id": 23,
+        "title": "The Promised Neverland",
+        "manga_id": "46e9cae5-4407-4576-9b9e-4c517ae9298e",
+        "cover_art_id": "8ed50b28-bf0f-4fe5-8d71-d345d90035f5"
+    },
+    {
+        "id": 24,
+        "title": "Kaguya-Sama: Love is War",
+        "manga_id": "37f5cce0-8070-4ada-96e5-fa24b1bd4ff9",
+        "cover_art_id": "21f6ef81-7d2f-40c9-b998-a6a70ec26bb3"
+    },
+    {
+        "id": 25,
+        "title": "Assassination Classroom",
+        "manga_id": "333f4d22-7753-4e3b-b0da-0a69b2cdce4f",
+        "cover_art_id": "ac46f069-4164-4f37-9056-af968f02d81d"
+    },
+    {
+        "id": 26,
+        "title": "Kuroko\u2019s Basketball",
+        "manga_id": "f8e41a48-5ca9-41e3-94a7-a1379a4fda62",
+        "cover_art_id": "6648e26b-6014-4f27-91ce-8894dccc9f2a"
+    },
+    {
+        "id": 27,
+        "title": "Parasyte",
+        "manga_id": "07823fcd-f2c9-458c-9824-3eae62b2a006",
+        "cover_art_id": "76624a00-839a-4f60-9ee9-440335e3f4a0"
+    },
+    {
+        "id": 28,
+        "title": "Card Captor Sakura",
+        "manga_id": "e4967558-c7fa-4c48-9a4f-1e462f50fb2c",
+        "cover_art_id": "57877743-2684-4f75-8ebc-81dc78c1c29f"
+    },
+    {
+        "id": 29,
+        "title": "Bungo Stray Dogs",
+        "manga_id": "3fba42cf-2ad6-4c30-a7ab-46cb8149208a",
+        "cover_art_id": "edfbe377-6b81-41cb-8049-f105c883cd28"
+    },
+    {
+        "id": 30,
+        "title": "Devilman",
+        "manga_id": "4393fd4e-d646-4bab-9c95-786168ccb618",
+        "cover_art_id": "96cda95d-041c-42fb-974e-1e19fb822488"
+    },
+    {
+        "id": 31,
+        "title": "Magi: The Labyrinth of Magic",
+        "manga_id": "ce63e6b8-fad8-48bc-a2aa-d801fb8d5d43",
+        "cover_art_id": "b53eb7c0-9b67-4f15-a9f6-8c238367a497"
+    },
+    {
+        "id": 32,
+        "title": "Fire Force",
+        "manga_id": "ec514ef4-fb77-43b9-b9b4-528229de1308",
+        "cover_art_id": "b2d88df1-cd1e-49e6-a253-b14b1e80f4c7"
+    },
+    {
+        "id": 33,
+        "title": "Toilet-Bound Hanako-kun",
+        "manga_id": "a4b39b6e-a448-4644-a540-64ceff1d8305",
+        "cover_art_id": "e42d5bcf-702d-4022-a4f8-fda8c309caa0"
+    },
+    {
+        "id": 34,
+        "title": "Fruits Basket",
+        "manga_id": "e9b1d4ba-b8fb-48c3-8d52-5a4eefd05980",
+        "cover_art_id": "552c94f8-3be2-4fad-af23-6507db823482"
+    },
+    {
+        "id": 35,
+        "title": "D.Gray-Man",
+        "manga_id": "b6886009-e60b-44a7-abc2-a575765277ba",
+        "cover_art_id": "5a3eb93e-b664-44ff-be43-f3f39c3dcf5e"
+    },
+    {
+        "id": 36,
+        "title": "Dr. Stone",
+        "manga_id": "cfc3d743-bd89-48e2-991f-63e680cc4edf",
+        "cover_art_id": "73c9e0c1-c957-4a5d-9f9d-8fb13e930bfc"
+    },
+    {
+        "id": 37,
+        "title": "Code Geass: Lelouch of the Rebellion",
+        "manga_id": "7c71eb97-5a02-41cf-b116-92b20ba832ce",
+        "cover_art_id": "34b8cb37-776b-450d-b487-9fc6fae6b50d"
+    },
+    {
+        "id": 38,
+        "title": "deth note",
+        "manga_id": "75ee72ab-c6bf-4b87-badd-de839156934c",
+        "cover_art_id": "a3b22eeb-a853-4f21-b279-f6a93a10b3fc"
+    },
+    {
+        "id": 39,
+        "title": "Rent-A-Girlfriend",
+        "manga_id": "bd2dd893-6bbc-4d6c-8c06-921318ef9ac0",
+        "cover_art_id": "50d6191d-17f7-470d-95fc-8cefde811a5c"
+    },
+    {
+        "id": 40,
+        "title": "slam dunk",
+        "manga_id": "319df2e2-e6a6-4e3a-a31c-68539c140a84",
+        "cover_art_id": "27a3c090-edec-49e1-b89f-c7f5245f5766"
+    },
+    {
+        "id": 41,
+        "title": "sakamoto days",
+        "manga_id": "9d9b04ad-9a83-49f4-8ae4-a9a3780fe9c0",
+        "cover_art_id": "2192e9b9-6a1d-4038-a0f1-6040aa88507e"
+    },
+    {
+        "id": 42,
+        "title": "vagabond",
+        "manga_id": "d1a9fdeb-f713-407f-960c-8326b586e6fd",
+        "cover_art_id": "8e74a0f1-09a0-407f-9bfd-d4dc961e54e9"
+    },
+    {
+        "id": 43,
+        "title": "monster",
+        "manga_id": "d9e30523-9d65-469e-92a2-302995770950",
+        "cover_art_id": "90d54370-75cd-4fb1-a7fc-712e1a692074"
+    },
+    {
+        "id": 44,
+        "title": "Eighty Six- Fragmental Neoteny",
+        "manga_id": "9538256e-d9ba-4f57-81a1-dd3d8c4a4546",
+        "cover_art_id": "0c48c180-aa21-4aac-9f87-29e972999394"
+    },
+    {
+        "id": 45,
+        "title": "gantz",
+        "manga_id": "c196dcc8-d942-4abf-987f-bfa244650585",
+        "cover_art_id": "f2423bf6-d1e4-4f0c-8a14-8aa5be50bf09"
+    },
+    {
+        "id": 46,
+        "title": "bakemonogatari",
+        "manga_id": "4265c437-7d57-4d31-9b1d-0e574a07b7b7",
+        "cover_art_id": "45751b12-6633-4a38-9a7f-775140856274"
+    },
+    {
+        "id": 47,
+        "title": "dorohedoro",
+        "manga_id": "34f45c13-2b78-4900-8af2-d0bb551101f4",
+        "cover_art_id": "9db1ca33-3869-4f55-9801-69536ea31122"
+    },
+    {
+        "id": 48,
+        "title": "sousou no frieren",
+        "manga_id": "b0b721ff-c388-4486-aa0f-c2b0bb321512",
+        "cover_art_id": "d487af49-ecfc-45a9-9c7a-0f519028834d"
+    },
+    {
+        "id": 49,
+        "title": "wind breaker",
+        "manga_id": "c1c408f6-3dec-4d62-b6b3-b57e615d933c",
+        "cover_art_id": "a3ba5972-7ab1-4262-9f30-52ab01c9da6b"
+    },
+    {
+        "id": 50,
+        "title": "mob psycho 100",
+        "manga_id": "736a2bf0-f875-4b52-a7b4-e8c40505b68a",
+        "cover_art_id": "de72e40f-ba4f-4fa5-a703-6fc1c393d29b"
+    },
+    {
+        "id": 51,
+        "title": "oshi no ko",
+        "manga_id": "296cbc31-af1a-4b5b-a34b-fee2b4cad542",
+        "cover_art_id": "b5440e40-c952-4828-9bb3-2aab251b389b"
+    },
+    {
+        "id": 52,
+        "title": "tensei shitara slime datta ken",
+        "manga_id": "e78a489b-6632-4d61-b00b-5206f5b8b22b",
+        "cover_art_id": "3a114581-3a15-49c9-8ab9-f06c6520f1a5"
+    },
+    {
+        "id": 53,
+        "title": "neon genesis evangelion",
+        "manga_id": "aaedcbda-ea61-4e7b-8143-7a475f327fbf",
+        "cover_art_id": "ef127567-de05-4369-9bc1-157b2d354796"
+    },
+    {
+        "id": 54,
+        "title": "hajime no ippo",
+        "manga_id": "f7888782-0727-49b0-95ec-a3530c70f83b",
+        "cover_art_id": "90453cfd-a9ee-414f-875f-1d1ee7a400b2"
+    },
+    {
+        "id": 55,
+        "title": "blue lock",
+        "manga_id": "4141c5dc-c525-4df5-afd7-cc7d192a832f",
+        "cover_art_id": "4eac7d6c-2d1e-4d08-8c2f-b53ca1b0a5a7"
+    },
+    {
+        "id": 56,
+        "title": "wotaku ni koi wa muzukashii",
+        "manga_id": "65263bf9-4f87-4513-b72f-ad6436b3911c",
+        "cover_art_id": "e0a36b9d-f2fc-48cc-8967-b28e3b1c004e"
+    },
+    {
+        "id": 57,
+        "title": "horimiya",
+        "manga_id": "a25e46ec-30f7-4db6-89df-cacbc1d9a900",
+        "cover_art_id": "af6b32f6-4e23-4ffb-8f42-1b96ffcc2d55"
+    },
+    {
+        "id": 58,
+        "title": "kumo desu ga",
+        "manga_id": "eb2d1a45-d4e7-4e32-a171-b5b029c5b0cb",
+        "cover_art_id": "475c0e3d-243d-4a6e-98b7-a102fce6dad1"
+    },
+    {
+        "id": 59,
+        "title": "mairimashita iruma-kun",
+        "manga_id": "d7037b2a-874a-4360-8a7b-07f2899152fd",
+        "cover_art_id": "41cbae97-18b4-4dc0-af16-24b8c2127327"
+    },
+    {
+        "id": 60,
+        "title": "sweet home",
+        "manga_id": "7cc37898-6669-407f-b7a6-f23a2859bc0b",
+        "cover_art_id": "3eedda8c-d4d8-43c1-afdd-15479daf7db2"
+    },
+    {
+        "id": 61,
+        "title": "tower of god",
+        "manga_id": "c0ee660b-f9f2-45c3-8068-5123ff53f84a",
+        "cover_art_id": "ac4785bb-eac5-42b3-b137-3a9e8c31fe59"
+    },
+    {
+        "id": 62,
+        "title": "jigokuraku",
+        "manga_id": "cb77e4a6-3921-43b9-9d64-7d78cd3205ce",
+        "cover_art_id": "310eea75-9452-4fa5-93b5-881d4e3fecc1"
+    },
+    {
+        "id": 63,
+        "title": "fate/zero",
+        "manga_id": "5f3d8a01-3e20-4925-a8cc-79c891a0b687",
+        "cover_art_id": "9a782253-8ac7-4f47-bd17-448d6e57bd14"
+    },
+    {
+        "id": 64,
+        "title": "noragami",
+        "manga_id": "e5ce88e2-8c46-482d-8acf-5c6d5a64a585",
+        "cover_art_id": "4f6391d6-276d-43cd-9646-d5d2638097b6"
+    },
+    {
+        "id": 65,
+        "title": "ballroom e youkoso",
+        "manga_id": "127d4af7-4062-45ec-afb7-b8cf33deb3db",
+        "cover_art_id": "0ab9e10c-811f-457a-aeff-9fd4a7f0ba18"
+    },
+    {
+        "id": 66,
+        "title": "saiki kusuo",
+        "manga_id": "ae163fec-29d0-42f9-9fac-b751fc0f9035",
+        "cover_art_id": "1d414430-753c-4f92-928f-31085ee30e2f"
+    },
+    {
+        "id": 67,
+        "title": "tomodachi game",
+        "manga_id": "b35f67b6-bfb9-4cbd-86f0-621f37e6cb41",
+        "cover_art_id": "c03ba096-5af2-40c8-9203-ed8a6a35a2b2"
+    },
+    {
+        "id": 68,
+        "title": "act-age",
+        "manga_id": "f1aa6ceb-4542-4b67-8c44-3cc4c429e4f2",
+        "cover_art_id": "39327b63-3cba-4f48-bc24-bddd59068017"
+    },
+    {
+        "id": 69,
+        "title": "bakuman",
+        "manga_id": "fa3e0b2f-4e1f-48ee-9af0-1de9dc28ca51",
+        "cover_art_id": "44d4b884-196c-4fde-b7f0-b2bcca6579f2"
+    },
+    {
+        "id": 70,
+        "title": "hanma baki",
+        "manga_id": "0b3f409c-2bda-40b7-9d1d-1039c0b7d62a",
+        "cover_art_id": "9b1ce79d-7ab2-4f1b-b937-be74d6461a43"
+    },
+    {
+        "id": 71,
+        "title": "bocchi the rock",
+        "manga_id": "2e0fdb3b-632c-4f8f-a311-5b56952db647",
+        "cover_art_id": "08388533-61f5-4869-b948-5485d487c85a"
+    },
+    {
+        "id": 72,
+        "title": "dandadan",
+        "manga_id": "68112dc1-2b80-4f20-beb8-2f2a8716a430",
+        "cover_art_id": "1c9d8165-987e-4213-9805-3aa0d0a7952b"
+    },
+    {
+        "id": 73,
+        "title": "beastars",
+        "manga_id": "f5e3baad-3cd4-427c-a2ec-ad7d776b370d",
+        "cover_art_id": "86433c02-be77-4fb9-aa6d-cce2f3278d87"
+    },
+    {
+        "id": 74,
+        "title": "kage no jitsuryokusha ni naritakute",
+        "manga_id": "77bee52c-d2d6-44ad-a33a-1734c1fe696a",
+        "cover_art_id": "6eacd76a-4145-4828-9496-1d1b297a1fad"
+    },
+    {
+        "id": 75,
+        "title": "Tate no Yuusha no Toaru Ichinichi",
+        "manga_id": "7df1f449-d3e9-4507-9fb3-18d6238d76fa",
+        "cover_art_id": "e7406776-92ba-4f16-93d5-1433eca1e3b3"
+    },
+    {
+        "id": 76,
+        "title": "yojou senki",
+        "manga_id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+        "cover_art_id": "a4831e91-6d0b-4026-bf0e-7d5c60670ed9"
+    },
+    {
+        "id": 77,
+        "title": "date a live",
+        "manga_id": "8499d5d0-e558-4853-b0bc-8ae2edbc6978",
+        "cover_art_id": "5dffc07d-c354-4f31-9296-e7b178f430f7"
+    },
+    {
+        "id": 78,
+        "title": "black lagoon",
+        "manga_id": "6da0b34b-db19-491a-b85c-6e31e0986f15",
+        "cover_art_id": "0d53aaca-1b76-49a1-bda4-a26023059358"
+    },
+    {
+        "id": 79,
+        "title": "yofukashi no uta",
+        "manga_id": "259dfd8a-f06a-4825-8fa6-a2dcd7274230",
+        "cover_art_id": "94f63fac-a687-44c1-a404-9641ae6b5b75"
+    },
+    {
+        "id": 80,
+        "title": "Shuumatsu Nani Shitemasu ka? Isogashii desu ka? Sukutte Moratte Ii desu ka?",
+        "manga_id": "11495b6d-cec6-425e-b628-9b21317412ee",
+        "cover_art_id": "12fd8837-a4b1-4f0e-9497-669d9a9799c7"
+    },
+    {
+        "id": 81,
+        "title": "no game no life",
+        "manga_id": "eb57cab2-b5bf-4317-9928-7215921a74d2",
+        "cover_art_id": "314d3b16-cd34-4f42-8213-f556e041ccbf"
+    },
+    {
+        "id": 82,
+        "title": "claymore",
+        "manga_id": "be8fe64b-37da-4fba-b14d-603aba19be1f",
+        "cover_art_id": "2fb778fa-0eb0-4fec-9564-540386cdb5cf"
+    },
+    {
+        "id": 83,
+        "title": "trigun",
+        "manga_id": "4644da00-8f23-44a8-aa99-e3661dcee901",
+        "cover_art_id": "7c371739-4a7b-4f59-aa98-95050dc5c8cd"
+    },
+    {
+        "id": 84,
+        "title": "vinland saga",
+        "manga_id": "5d1fc77e-706a-4fc5-bea8-486c9be0145d",
+        "cover_art_id": "94bc65e9-6918-4ef0-a181-5dc90b1d2fbe"
+    },
+    {
+        "id": 85,
+        "title": "mahoutsukai no yome",
+        "manga_id": "195023bf-cf9a-4772-94ef-09dd6eddea84",
+        "cover_art_id": "0790c40b-27d2-4b6d-af62-6ba7449c2720"
+    },
+    {
+        "id": 86,
+        "title": "tonikaku kawai",
+        "manga_id": "30f3ac69-21b6-45ad-a110-d011b7aaadaa",
+        "cover_art_id": "be5dce41-4786-40bc-8ba7-2c28f68249cb"
+    },
+    {
+        "id": 87,
+        "title": "helck",
+        "manga_id": "10a4985d-0713-462e-a9d6-767bf91e4fd7",
+        "cover_art_id": "52445e47-bf37-4fa6-b7e0-19b594218865"
+    },
+    {
+        "id": 88,
+        "title": "fumetsu no anata e",
+        "manga_id": "34e45b02-b5c8-4a4b-a21a-7b5059391dc8",
+        "cover_art_id": "e0c935d4-13f9-4e9a-b5be-47c687d2eb5a"
+    },
+    {
+        "id": 89,
+        "title": "durara",
+        "manga_id": "af57b297-91c3-41c0-82c9-0ba56296f188",
+        "cover_art_id": "ca7bb5f1-27e0-4ff8-aef3-0175a8b10abe"
+    },
+    {
+        "id": 90,
+        "title": "danmachi",
+        "manga_id": "cf16ea31-d883-4458-8eef-72c9651373b7",
+        "cover_art_id": "c2a45e70-5c61-4fd4-8d56-38e7b644a431"
+    },
+    {
+        "id": 91,
+        "title": "soul eater",
+        "manga_id": "53ef1720-7a5d-40ad-90b0-2f9ca0a1ab01",
+        "cover_art_id": "1ecc0b27-3c80-4f15-a292-f0a7d43588a4"
+    },
+    {
+        "id": 92,
+        "title": "sword art online",
+        "manga_id": "512cd78f-cbb8-460a-bafd-e8840c0f7c31",
+        "cover_art_id": "741081ae-b7b1-4e23-8050-017c4e57ce64"
+    },
+    {
+        "id": 93,
+        "title": "gokushufudou",
+        "manga_id": "89daf9dc-075a-4aa5-873a-cc76bb287108",
+        "cover_art_id": "7c4db34a-3ecb-407c-b4ca-0023e9ef4323"
+    },
+    {
+        "id": 94,
+        "title": "summer time render",
+        "manga_id": "89bbd6b1-2558-4279-973c-3b1fd8807228",
+        "cover_art_id": "dddf3698-db6e-4fc0-9e66-439bf4675c06"
+    },
+    {
+        "id": 95,
+        "title": "ajin",
+        "manga_id": "331deec0-fb1a-4680-9248-8a0fc55b5b07",
+        "cover_art_id": "72d25055-cfa4-4f0a-ac6c-fd83168f6e73"
+    },
+    {
+        "id": 96,
+        "title": "mushoku tensei",
+        "manga_id": "dc481ed5-4925-4f3c-bac1-e73f1e7ed338",
+        "cover_art_id": "824a534d-54e8-444b-b310-121dc5681855"
+    },
+    {
+        "id": 97,
+        "title": "gangsta",
+        "manga_id": "4e6c7ed7-2111-4a3b-b34c-fbf07b1884c4",
+        "cover_art_id": "5de63518-d3b0-4f2f-a928-5e7fcdc94898"
+    },
+    {
+        "id": 98,
+        "title": "hellsing",
+        "manga_id": "6fcfaa0e-6023-403e-97f9-5301dd3c258c",
+        "cover_art_id": "83744450-4c22-4fac-bf50-0b3c7d067466"
+    },
+    {
+        "id": 99,
+        "title": "Shuumatsu no Valkyrie",
+        "manga_id": "b5b21ca1-bba5-4b9a-8cd1-6248f731650b",
+        "cover_art_id": "b3fbdb88-3ae7-4ea7-9a54-19ebbb2d3f0f"
+    },
+    {
+        "id": 100,
+        "title": "seishun buta yarou",
+        "manga_id": "b15632d7-88d0-4233-9815-c01e75cabda8",
+        "cover_art_id": "fb9b7749-a6ec-4ff4-b939-855d26ad17a7"
+    },
+    {
+        "id": 101,
+        "title": "tengoky daimakyou",
+        "manga_id": "eeb2ab0e-7dbc-4f0c-b476-8181d44217a8",
+        "cover_art_id": "187d94c3-fed4-402d-8cc8-e056355c07a7"
+    },
+    {
+        "id": 102,
+        "title": "cavaleiros do zodiaco",
+        "manga_id": "101b9672-f73f-41f5-8de1-97ef1a732de1",
+        "cover_art_id": "2bff5c06-477b-4f1a-88dd-71a495f8b765"
+    },
+    {
+        "id": 103,
+        "title": "uzumaki",
+        "manga_id": "f4cfbb1c-766e-49db-ae80-1a5db3cbcc1b",
+        "cover_art_id": "157a5085-c5a7-4aaf-b93b-5fed5fdd3ae0"
+    },
+    {
+        "id": 104,
+        "title": "tengen toppa gurren lagann",
+        "manga_id": "e8c03c09-960b-461f-b430-0ef8ba86e19b",
+        "cover_art_id": "3822bddc-04c0-4fdf-ac1a-f2b95fd623af"
+    },
+    {
+        "id": 105,
+        "title": "hokuto no ken",
+        "manga_id": "75251a47-952c-4e38-b1c6-3572b9bfd481",
+        "cover_art_id": "862be22d-1fe6-40b4-aec0-85b4c1abf490"
+    },
+    {
+        "id": 106,
+        "title": "komi san",
+        "manga_id": "a96676e5-8ae2-425e-b549-7f15dd34a6d8",
+        "cover_art_id": "baa5f5b3-6f05-49a0-a10c-aa155f3931d5"
+    },
+    {
+        "id": 107,
+        "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+        "manga_id": "affdac0b-b91e-40d5-81bd-642ece74bb0d",
+        "cover_art_id": "daea8e6c-f064-4f3a-934f-eae29f783667"
+    },
+    {
+        "id": 109,
+        "title": "sengoku youko",
+        "manga_id": "3fbeec9f-9c47-4565-8f79-972807c99279",
+        "cover_art_id": "08fbe8ee-22cc-4fd9-a547-cfbab0ac1e1a"
+    },
+    {
+        "id": 110,
+        "title": "gakkow gurashi",
+        "manga_id": "54eed888-51c1-41de-8b00-7eb65b832234",
+        "cover_art_id": "01ed62ff-9b11-4f77-86f4-f3d1f1a2c17a"
+    },
+    {
+        "id": 111,
+        "title": "goblin slayer",
+        "manga_id": "67a7dfd1-a39d-46c8-8ff2-9a24a9abaeb6",
+        "cover_art_id": "8597b4be-020a-4cd8-8f87-529b36056e34"
+    },
+    {
+        "id": 112,
+        "title": "akira",
+        "manga_id": "175cf215-2122-4656-9fac-37ac092438af",
+        "cover_art_id": "c6212beb-fdc6-4425-b102-97740fa4983c"
+    },
+    {
+        "id": 113,
+        "title": "astroboy",
+        "manga_id": "ca4c84bb-7272-45aa-a22d-dc1282b52372",
+        "cover_art_id": "e0a6e096-59fd-4fd4-a0eb-97d3f918d47f"
+    },
+    {
+        "id": 114,
+        "title": "jujutsu kaisen",
+        "manga_id": "c52b2ce3-7f95-469c-96b0-479524fb7a1a",
+        "cover_art_id": "a6ee382d-25ee-4e8f-8a49-bef48261eba8"
+    }
+]
