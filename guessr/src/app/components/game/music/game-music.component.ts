@@ -39,13 +39,14 @@ export class GameMusicComponent implements OnInit {
     // Recuperar o número da fase da URL
     this.route.params.subscribe(params => {
       const levelNumber = +params['levelNumber']; // + converte para número
-      console.log(levelNumber);
+      console.log("Número da fase: " + levelNumber);
       // Fazer uma requisição HTTP para carregar o arquivo JSON
       this.http.get<any>('assets/album-ids.json').subscribe(data => {
         // Processar os dados do JSON
         const faseIdMapping = data;
         // Obter o ID do álbum correspondente ao número da fase
         this.albumToGuessId = faseIdMapping[levelNumber];
+        console.log("ID do álbum para descobrir: " + this.albumToGuessId);
 
         // Resetar a quantidade de vidas e o estado de acerto
         this.livesRemaining = 4;

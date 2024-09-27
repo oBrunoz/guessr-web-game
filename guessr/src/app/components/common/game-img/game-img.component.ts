@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-game-img',
@@ -15,6 +15,11 @@ export class GameImgComponent {
   @Input() guessedCorrectly: boolean = false; // Estado inicial de acerto
 
   ngOnInit(): void {
-    console.log(this.ImageUrl)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['ImageUrl']) {
+      console.log('ngOnChanges:', this.ImageUrl);
+    }
   }
 }

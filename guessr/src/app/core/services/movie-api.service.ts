@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +7,7 @@ export class MovieAPIService {
   private access_token?: string;
 
   constructor() {
-    this.access_token = environment.tmdb_pass;
+    this.access_token = "";
   }
 
   async getToken(): Promise<string> {
