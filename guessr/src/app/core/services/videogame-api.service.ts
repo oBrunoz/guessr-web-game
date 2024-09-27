@@ -1,14 +1,15 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VideogameAPIService {
-  private clientId = '';
-  private clientSecret = '';
+  private clientId = environment.igdb_id;
+  private clientSecret = environment.igdb_secret;
   private authUrl = 'https://id.twitch.tv/oauth2/token';
   private apiUrl = '/api';
   private accessToken: string | null = null;
