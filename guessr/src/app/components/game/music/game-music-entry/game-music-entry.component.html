@@ -1,6 +1,7 @@
 <!-- INPUT -->
 <div class="user-input">
-    <input type="text" name="albumSearch" id="albumSearch" (input)="searchAlbums($event)" [(ngModel)]="selectedAlbumTitle">
+    <input type="text" name="albumSearch" id="albumSearch" (input)="searchAlbums($event)"
+        [(ngModel)]="selectedAlbumTitle">
 
     <!-- SUGESTÕES -->
     <div class="suggestions" *ngIf="showSuggestions" [ngClass]="{'fade-in': showSuggestions}">
@@ -13,5 +14,3 @@
 
     <button (click)="submitAlbum()">Enviar</button> <!-- Botão para enviar a busca -->
 </div>
-
-

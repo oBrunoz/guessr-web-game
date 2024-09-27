@@ -8,7 +8,7 @@ import { LevelSelectorService } from '../../core/services/level-selector.service
 @Component({
   selector: 'app-level-selector',
   standalone: true,
-  imports: [ CommonModule ],
+  imports: [CommonModule],
   templateUrl: './level-selector.component.html',
   styleUrl: './level-selector.component.css'
 })
@@ -18,7 +18,7 @@ export class LevelSelectorComponent implements OnInit {
   @Output() phaseSelected = new EventEmitter<number>();
   gameType: string = '';
 
-  constructor(private http: HttpClient, private router: Router, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute ) {}
+  constructor(private http: HttpClient, private router: Router, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.url.subscribe(url => {

@@ -1,21 +1,22 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { GameButtonsComponent } from '../../common/game-buttons/game-buttons.component';
-import { GameMusicEntryComponent } from './game-music-entry/game-music-entry.component';
-import { GameImgComponent } from '../../common/game-img/game-img.component';
-import { GameInfoComponent } from '../../common/game-info/game-info.component';
-import { GameLivesComponent } from '../../common/game-lives/game-lives.component';
 import { CommonModule } from '@angular/common';
-import { MusicAPIService } from '../../../core/services/music-api.service';
-import { LevelSelectorService } from '../../../core/services/level-selector.service';
-import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+
+import { LevelSelectorService } from '../../../core/services/level-selector.service';
+import { MusicAPIService } from '../../../core/services/music-api.service';
+import { GameImgComponent } from '../../common/game-img/game-img.component';
+import { GameLivesComponent } from '../../common/game-lives/game-lives.component';
+import { GameMusicEntryComponent } from './game-music-entry/game-music-entry.component';
+import { GameInfoComponent } from '../../common/game-info/game-info.component';
+import { GameButtonsComponent } from '../../common/game-buttons/game-buttons.component';
 
 @Component({
   selector: 'app-game-music',
   standalone: true,
-  templateUrl: './game-music.component.html',
-  styleUrl: './game-music.component.css',
   imports: [GameImgComponent, GameLivesComponent, GameMusicEntryComponent, GameInfoComponent, GameButtonsComponent, CommonModule],
+  templateUrl: './game-music.component.html',
+  styleUrl: './game-music.component.css'
 })
 
 export class GameMusicComponent implements OnInit {
@@ -26,13 +27,13 @@ export class GameMusicComponent implements OnInit {
 
   albumToGuessId!: number; // Define a ID do álbum a ser descoberto
   albumImageUrl!: string;
-    
+
   livesRemaining: number = 4; // Número inicial de vidas
   guessedCorrectly: boolean = false; // Indica se o filme foi adivinhado corretamente
 
   @ViewChild(GameMusicEntryComponent) gameMusicEntryComponent!: GameMusicEntryComponent;
 
-  constructor(private musicAPIService: MusicAPIService, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private musicAPIService: MusicAPIService, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit(): void {
     // Recuperar o número da fase da URL
@@ -59,24 +60,22 @@ export class GameMusicComponent implements OnInit {
 
   async submitAlbumHandler(submittedCorrectly: boolean) {
     if (submittedCorrectly) {
-      this.guessedCorrectly = true; 
+      this.guessedCorrectly = true;
     }
     if (!submittedCorrectly) {
-        this.livesRemaining--; // Reduz o número de vidas se o álbum foi submetido incorretamente
-      }
+      this.livesRemaining--; // Reduz o número de vidas se o álbum foi submetido incorretamente
+    }
     if (this.livesRemaining < 1) {
       this.gameMusicEntryComponent.wrongAlbum();
     }
   }
 
-
   onAlbumSelected(details: any) {
-      this.selectedAlbumTitle = details.title;
-      this.selectedAlbumReleaseYear = details.releaseYear;
-      this.selectedAlbumArtist = details.artist;
-      this.albumSelected = true;
+    this.selectedAlbumTitle = details.title;
+    this.selectedAlbumReleaseYear = details.releaseYear;
+    this.selectedAlbumArtist = details.artist;
+    this.albumSelected = true;
   }
-
 
   async fetchAlbumCover(): Promise<void> {
     try {

@@ -1,6 +1,7 @@
 <!-- INPUT -->
 <div class="user-input">
-    <input type="text" name="movieSearch" id="movieSearch" (input)="searchMovies($event)" [(ngModel)]="selectedMovieTitle">
+    <input type="text" name="movieSearch" id="movieSearch" (input)="searchMovies($event)"
+        [(ngModel)]="selectedMovieTitle">
 
     <!-- SUGESTÕES -->
     <div class="suggestions" *ngIf="showSuggestions" [ngClass]="{'fade-in': showSuggestions}">
@@ -13,5 +14,3 @@
 
     <button (click)="submitMovie()">Enviar</button> <!-- Botão para enviar a busca -->
 </div>
-
-

@@ -21,6 +21,7 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.9",
+    "dotenv": "^16.4.5",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.2",
@@ -39,6 +40,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ngx-build-plus": "^18.0.0",
     "typescript": "~5.2.2"
   }
 }

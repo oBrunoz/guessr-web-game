@@ -1,21 +1,22 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+
+import { LevelSelectorService } from '../../../core/services/level-selector.service';
+import { MovieAPIService } from '../../../core/services/movie-api.service';
 import { GameImgComponent } from "../../common/game-img/game-img.component";
 import { GameLivesComponent } from '../../common/game-lives/game-lives.component';
 import { GameMovieEntryComponent } from './game-movie-entry/game-movie-entry.component';
 import { GameInfoComponent } from '../../common/game-info/game-info.component';
 import { GameButtonsComponent } from '../../common/game-buttons/game-buttons.component';
-import { CommonModule } from '@angular/common';
-import { MovieAPIService } from '../../../core/services/movie-api.service';
-import { LevelSelectorService } from '../../../core/services/level-selector.service';
-import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-game-movie',
   standalone: true,
+  imports: [GameImgComponent, GameLivesComponent, GameMovieEntryComponent, GameInfoComponent, GameButtonsComponent, CommonModule],
   templateUrl: './game-movie.component.html',
-  styleUrl: './game-movie.component.css',
-  imports: [ GameImgComponent, GameLivesComponent, GameMovieEntryComponent, GameInfoComponent, GameButtonsComponent, CommonModule ],
+  styleUrl: './game-movie.component.css'
 })
 
 export class GameMovieComponent implements OnInit {
@@ -26,13 +27,13 @@ export class GameMovieComponent implements OnInit {
 
   movieToGuessId!: number; // Define a ID do filme a ser descoberto
   movieImageUrl!: string;
-  
+
   livesRemaining: number = 4; // Número inicial de vidas
   guessedCorrectly: boolean = false; // Indica se o filme foi adivinhado corretamente
 
   @ViewChild(GameMovieEntryComponent) gameMovieEntryComponent!: GameMovieEntryComponent;
 
-  constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(private movieAPIService: MovieAPIService, private levelSelectorService: LevelSelectorService, private route: ActivatedRoute, private http: HttpClient) { }
 
   ngOnInit(): void {
     // Recuperar o número da fase da URL
@@ -59,22 +60,21 @@ export class GameMovieComponent implements OnInit {
 
   async submitMovieHandler(submittedCorrectly: boolean) {
     if (submittedCorrectly) {
-      this.guessedCorrectly = true; 
+      this.guessedCorrectly = true;
     }
     if (!submittedCorrectly) {
-        this.livesRemaining--; // Reduz o número de vidas se o filme foi submetido incorretamente
-      }
+      this.livesRemaining--; // Reduz o número de vidas se o filme foi submetido incorretamente
+    }
     if (this.livesRemaining < 1) {
       this.gameMovieEntryComponent.wrongMovie();
     }
   }
 
-
   onMovieSelected(details: any) {
-      this.selectedMovieTitle = details.title;
-      this.selectedMovieReleaseYear = details.releaseYear;
-      this.selectedMovieDirector = details.director;
-      this.movieSelected = true;
+    this.selectedMovieTitle = details.title;
+    this.selectedMovieReleaseYear = details.releaseYear;
+    this.selectedMovieDirector = details.director;
+    this.movieSelected = true;
   }
 
   async fetchMovieImage() {

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class LevelSelectorService {
   private selectedLevelId!: number;
 
-  constructor() {}
+  constructor() { }
 
   setSelectedLevelId(levelId: number) {
     this.selectedLevelId = levelId;

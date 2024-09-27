@@ -42,3 +42,6 @@ testem.log
 Thumbs.db
 
 #Config files
+
+# Environment Variables (que contém chaves privaas)
+src/environments

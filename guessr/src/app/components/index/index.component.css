@@ -14,18 +14,18 @@
     padding: 55px;
 }
 
-.main-container-card > .container-info {
+.main-container-card>.container-info {
     width: fit-content;
     display: flex;
     align-items: center;
     gap: 70px;
 }
 
-.main-container-card > .container-info > .random-image {
+.main-container-card>.container-info>.random-image {
     width: 45%;
 }
 
-.main-container-card > .container-info > .container-image-info-entry {
+.main-container-card>.container-info>.container-image-info-entry {
     display: flex;
     justify-content: center;
     align-items: center;

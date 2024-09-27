@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class GameButtonsComponent {
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   return(): void {
 
@@ -64,10 +64,10 @@ export class GameButtonsComponent {
   }
 
   isLastLevel(): boolean {
-      // Obtém o número da fase da URL
-      const gameLevel = parseInt(this.route.snapshot.url[1].path);
-      // Retorna true se o número da fase for 100, indicando que é a última fase
-      return gameLevel === 100;
+    // Obtém o número da fase da URL
+    const gameLevel = parseInt(this.route.snapshot.url[1].path);
+    // Retorna true se o número da fase for 100, indicando que é a última fase
+    return gameLevel === 100;
   }
 
 }

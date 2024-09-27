@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-game-music-entry',
   standalone: true,
-  imports: [ CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './game-music-entry.component.html',
   styleUrl: './game-music-entry.component.css'
 })
@@ -17,14 +17,11 @@ export class GameMusicEntryComponent {
   selectedAlbumTitle: string = '';
   showSuggestions: boolean = false;
 
-  @Input() albumToGuessId: number = 0; 
+  @Input() albumToGuessId: number = 0;
   @Output() albumSelected = new EventEmitter<any>();
   @Output() submitAlbumEvent = new EventEmitter<boolean>(); // Evento para notificar o componente pai se o álbum foi submetido com sucesso
 
-  constructor( private musicAPIService: MusicAPIService) {}
-
-  ngOnInit(): void {
-  }
+  constructor(private musicAPIService: MusicAPIService) { }
 
   async searchAlbums(event: any) {
     const query = event.target.value;
@@ -122,6 +119,5 @@ export class GameMusicEntryComponent {
         console.error('Erro ao buscar detalhes do álbum:', error);
       });
   }
-
 
 }

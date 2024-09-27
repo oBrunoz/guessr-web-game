@@ -1,0 +1,19 @@
+<!-- INPUT -->
+<div class="user-input">
+    <input type="text" name="videogameSearch" id="videogameSearch" (input)="searchVideogames($event)"
+        [(ngModel)]="selectedVideogameTitle">
+
+    <!-- SUGESTÕES -->
+    <div class="suggestions" *ngIf="showSuggestions" [ngClass]="{'fade-in': showSuggestions}">
+        <ul>
+            <li *ngFor="let videogame of videogameSuggestions" (click)="selectVideogame(videogame)">
+                {{ videogame.name }}
+                <span *ngIf="videogame.first_release_date">
+                    ({{ convertUnixToDate(videogame.first_release_date) | date:'yyyy' }})
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <button (click)="submitVideogame()">Enviar</button> <!-- Botão para enviar a busca -->
+</div>
