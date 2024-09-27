@@ -43,5 +43,5 @@ Thumbs.db
 
 #Config files
 
-# Environment Variables (que contém chaves privaas)
+# Environment Variables (que contém chaves privadas)
 src/environments
